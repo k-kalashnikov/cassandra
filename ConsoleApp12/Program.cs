@@ -16,8 +16,7 @@ namespace HelloApp
 			int age = 34;
 			double height = 1.7;
 			Console.WriteLine($"Имя: {name}  Возраст: {age}  Рост: {height}м");
-			Console.WriteLine($"Имя: {name + age}  Возраст: {age}  Рост: {height}м");
-
+			
 			Console.Write("Введите свое имя:");
 			string Name = Console.ReadLine();
 			Console.WriteLine($"Привет {Name}");
