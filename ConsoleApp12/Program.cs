@@ -6,8 +6,11 @@ namespace HelloApp
 	{
 		static void Main(string[] args)
 		{
-			//L2_IF();
-			L2_while();
+			/*
+			1. Каждая задача из домашки должна быть написана в отдельном методе
+			2. Имя метода должно назваться L[номер урока]_[тема]	 
+			3. В методе Main вызывать только методы в которых ты работаешь
+			 */
 		}
 
 		public static void L1() 
@@ -68,6 +71,6 @@ namespace HelloApp
 				Console.WriteLine("Enter please I");
 				i = int.Parse(Console.ReadLine());
 			}
-		}				
+		}
 	}
 }
