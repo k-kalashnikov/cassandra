@@ -12,7 +12,7 @@ namespace HelloApp
 			3. В методе Main вызывать только методы в которых ты работаешь
 			 */
 
-			L2_M7();
+			ArrayTask1();
 		}
 
 		public static void L1()
@@ -303,7 +303,83 @@ namespace HelloApp
 		 * {1,56,7,5,3,5}, {"bla", "blabla", "blablalbal"}
 		 * 
 		 * string == char[] - это надо помнить
+		 * 
+		 * 
+		 * [ память,память,память,память,память,память,память,память,память,память,память,память ]
+		 * 
+		 * 
+		 * [
+		 *  [c,т,р,о,к,а,1],
+		 *  строка2,
+		 *  строка3
+		 * ]
+		 * 
+		 * new - оператор для выделения памяти
+		 * 
+		 * я_хочу_выделить_память(new) под_целочисленный_элемент * 10
+		 * 
+		 * string[] == char[][]
+		 * 
 		 */
 
+		public static void ArraysOperationsExample()
+		{
+			int[] tempIntArray = new int[10];
+			
+			string[] tempStrArray = new string[10];
+
+			char[,] tempCharCharArray = new char[2,10];
+ 
+            foreach (int item in tempIntArray)
+			{
+
+            }
+
+            for (int i = 0; i < tempIntArray.Length; i++)
+            {
+				tempIntArray[i] = (new Random()).Next(0, i);
+            }
+		}
+
+		/*
+		 * 
+		 * 
+		 * "Пользователь вводит текст до нажатия enter"
+		 * [
+			 * "Пользователь",
+			 * "вводит",
+			 * "текст",
+			 * "до",
+			 * "нажатия",
+			 * "enter"
+		 * ]
+		 * 
+		 * 
+		Задача
+		Пользователь вводит текст до нажатия enter (используй Console.ReadLine() ), 
+		потом программа выводит все слова длинна которых больше 6 символов.
+
+		1. Считать текст, введенный пользователем
+		2. Разделить строку на слова
+		3. Определяем слова, которые состоят из более 6 символов
+
+		 */
+		public static void ArrayTask1()
+		{
+			Console.WriteLine("Please enter the text");
+			string text = Console.ReadLine();
+
+			char[] separators = " ,./\\\n\t!@#$%^&*()-=+_;:".ToCharArray();
+
+			string[] words = text.Split(separators);
+
+            foreach (string item in words)
+            {
+                if (item.Length > 6) 
+				{
+					Console.WriteLine(item);
+				}
+            }
+		}
 	}
 }
